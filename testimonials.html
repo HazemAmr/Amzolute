@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Amzolute</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Amzolute">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="about.html">ABOUT</a>
+                <a href="services.html">SERVICES</a>
+                <a href="case-studies.html">CASE STUDIES</a>
+                <a href="blog.html">Blog</a>
+                <a href="testimonials.html">TESTIMONIALS</a>
+                <button class="contact-btn">Contact</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="testimonials">
+            <h1>TESTIMONIALS</h1>
+            <h2>Just like Amazon - we're customer-obsessed!</h2>
+
+            <!-- Swiper -->
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <img src="images/testimonial1.png" alt="Testimonial 1">
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <img src="images/testimonial2.png" alt="Testimonial 2">
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <img src="images/testimonial3.png" alt="Testimonial 3">
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <img src="images/testimonial4.png" alt="Testimonial 4">
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide">
+                        <img src="images/testimonial5.png" alt="Testimonial 5">
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Link Swiper's JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize Swiper
+        new Swiper('.testimonials-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
