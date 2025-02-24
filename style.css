@@ -12,114 +12,67 @@
 }
 
 body {
-    background: linear-gradient(45deg, var(--primary-orange), #FFA559);
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: var(--text-white);
 }
 
-/* Navbar style */
+/* Navbar */
 nav {
     display: flex;
     justify-content: center;
-    /* Centers the nav items */
     align-items: center;
     padding: 1.5rem 4rem;
-    /* Adjusted padding to bring it down a bit */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    /* Removed blur and adjusted background opacity */
 }
 
-/* Logo stays on the left */
 nav .logo {
     position: absolute;
-
-    /* Positioning logo absolutely to stay on the left */
     left: 4rem;
-
-    /* Adjust the left distance as needed */
     top: 50%;
-    /* Vertically center the logo */
     transform: translateY(-50%);
-    /* Adjust for perfect centering */
 }
 
-/* Nav links (including the Contact button) */
 nav .nav-links {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Center the buttons again */
     flex-grow: 1;
-    /* Allows space between logo and nav links */
 }
 
-/* General button/link styles */
 nav .nav-links a,
 nav .nav-links .contact-btn {
     padding: 0.5rem 1rem;
     border: 1px solid white;
-    /* White outline */
     background-color: transparent;
-    /* Transparent background */
     color: white;
-    /* Default text color for links */
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 1rem;
-    /* Space between items */
     text-decoration: none;
-    /* Remove underline for <a> elements */
     transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
-    /* Smooth transition */
 }
 
-/* Hover effect for nav links and contact button */
 nav .nav-links a:hover,
 nav .nav-links .contact-btn:hover {
     background-color: white;
-    /* White background on hover */
     color: black;
-    /* Black text on hover */
     transform: scaleY(1.2);
-    /* Slight vertical expansion on hover */
 }
 
-/* Special hover effect for the contact button to make it initially black */
 nav .nav-links .contact-btn {
-    /* Default black text for contact button */
     border-color: black;
     background-color: black;
-    /* Black border for contact button */
 }
 
 nav .nav-links .contact-btn:hover {
     background-color: white;
-    /* Black background for the Contact button */
     color: black;
     border-color: white;
-
-    /* White text on hover for the Contact button */
-}
-
-.contact-btn {
-    /* Default black text for contact button */
-    border-color: black;
-    background-color: black;
-    /* Black border for contact button */
-}
-
-.contact-btn:hover {
-    background-color: white;
-    /* Black background for the Contact button */
-    color: black;
-    border-color: white;
-
-    /* White text on hover for the Contact button */
 }
 
 .logo img {
@@ -174,61 +127,30 @@ nav .nav-links .contact-btn:hover {
     position: relative;
 }
 
-/* Hero Content - Adjusting the layout of text and button */
 .hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    /* Space between text and button */
 }
 
-/* Certifications Section: Stack vertically and position higher on the page */
 .certifications {
     display: flex;
     flex-direction: column;
-    /* Stack vertically */
     justify-content: flex-start;
-    /* Align items at the start */
     gap: 1rem;
     position: absolute;
-    /* Positioning it outside the text flow */
     right: 4rem;
-    /* Adjust this as needed */
     top: 20%;
-    /* Move certifications higher in the page */
 }
 
-/* Certifications Images - Make them larger */
 .certifications img {
     height: 120px;
-    /* Increase the height of the badges */
     max-height: 150px;
-    /* Optional: control the max height of the certificates */
     object-fit: contain;
-    /* Ensure the images scale correctly */
 }
 
-/* Adjusting the "Yes, Please!" button to sit below the text */
-.contact-btn {
-    background: var(--bg-dark);
-    color: var(--text-white);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: transform 0.3s;
-    margin-top: 1rem;
-    /* Ensure the button is below the text */
-}
-
-.contact-btn:hover {
-    transform: scale(1.05);
-}
-
-/* Additional styling if necessary */
 .hero-content h1 {
     font-size: 5rem;
     font-weight: 900;
@@ -238,345 +160,15 @@ nav .nav-links .contact-btn:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
-    /* On smaller screens, make sure the certifications don't overlap or crowd the layout */
     .certifications {
         position: relative;
-        /* Remove the absolute position */
         margin-top: 2rem;
-        /* Give some space */
         justify-content: center;
-        /* Center the certifications */
         gap: 2rem;
     }
 
-    /* Adjust button size on small screens */
     .contact-btn {
         font-size: 1rem;
         padding: 1rem 2rem;
-    }
-}
-
-
-/* About Section */
-#about {
-    min-height: 100vh;
-    padding: 6rem 4rem;
-    background-image: url('https://amzolute.com/wp-content/uploads/2023/12/phone-boxes.png');
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-}
-
-#about h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-#about p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin-bottom: 1rem;
-}
-
-/* Services Section */
-#services {
-    min-height: 100vh;
-    padding: 6rem 4rem;
-    text-align: center;
-}
-
-.service-cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.service-card {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 2rem;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-/* Case Studies Section */
-#case-studies {
-    min-height: 100vh;
-    padding: 6rem 4rem;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-}
-
-/* Slider Container */
-.case-slider {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Case Cards Wrapper */
-.case-cards {
-    display: flex;
-    gap: 4rem;
-    /* Increased space between cards */
-    width: max-content;
-    position: relative;
-    will-change: transform;
-}
-
-/* Individual Case Card */
-.case-card {
-    background: white;
-    padding: 3rem;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 320px;
-    height: 320px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* Center the Images */
-.case-card img {
-    width: auto;
-    max-height: 150px;
-    max-width: 180px;
-    display: block;
-    margin: auto;
-}
-
-/* Button Styling */
-.case-card button {
-    background: #ff7e5f;
-    color: white;
-    border: none;
-    padding: 0.7rem 2rem;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: auto;
-    font-size: 1rem;
-}
-
-/* Blur Effect on Sides */
-.case-slider::before,
-.case-slider::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.case-slider::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), transparent);
-}
-
-.case-slider::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.9), transparent);
-}
-
-
-/* Testimonials Section */
-#testimonials {
-    min-height: 100vh;
-    padding: 6rem 4rem;
-    text-align: center;
-}
-
-#testimonials h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-#testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
-}
-
-/* Adjust Swiper Wrapper */
-.testimonials-slider {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
-/* Ensure images fit perfectly */
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    /* Optional: Rounded corners */
-    object-fit: contain;
-}
-
-/* Swiper Pagination Styling */
-.swiper-pagination {
-    position: relative;
-    margin-top: 1.5rem;
-}
-
-.swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: rgba(255, 255, 255, 0.5);
-    opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-    background: white;
-}
-
-
-
-/* Services Section */
-#services {
-    min-height: 100vh;
-    padding: 6rem 4rem;
-    text-align: center;
-}
-
-#services h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-#services h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#services p {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-}
-
-.service-cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.service-card {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 2rem;
-    border-radius: 30px;
-    width: 400px;
-    height: 150px;
-    /* Increased height to allow content to fit */
-    cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Centers content vertically */
-    align-items: center;
-    /* Centers content horizontally */
-    text-align: center;
-    /* Centers text horizontally */
-}
-
-.service-card h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--text-white);
-    transition: all 0.3s ease;
-    margin: 0;
-    z-index: 2;
-    /* Ensure heading is above content */
-}
-
-.service-content {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Ensures the content is centered inside the card */
-    z-index: 1;
-    /* Make sure content is below the heading */
-}
-
-.service-card:hover {
-    height: 180px;
-    background: var(--text-white);
-}
-
-.service-card:hover h3 {
-    opacity: 0;
-    /* Hide heading on hover */
-    transform: translateY(-10px);
-}
-
-.service-card:hover .service-content {
-    opacity: 1;
-    /* Show content on hover */
-    transform: translate(-50%, -50%);
-    /* Keep the content centered */
-}
-
-.service-content p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-top: 1rem;
-    color: var(--bg-dark);
-    padding: 0 1rem;
-}
-
-#services h3 {
-    font-size: 1.2rem;
-    margin: 3rem 0 2rem;
-    line-height: 1.5;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .service-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 768px) {
-    #services {
-        padding: 4rem 2rem;
-    }
-
-    #services h1 {
-        font-size: 3rem;
-    }
-
-    .service-card {
-        padding: 1.5rem;
     }
 }

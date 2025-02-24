@@ -1,0 +1,23 @@
+#about {
+    min-height: 100vh;
+    padding: 6rem 4rem;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#about h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
